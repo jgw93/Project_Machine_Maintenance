@@ -53,7 +53,7 @@ public class SecurityConfig {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .requestMatchers(HttpMethod.POST, "/member/login").permitAll()
+//                .requestMatchers(HttpMethod.POST, "/login").permitAll()
                 .and()
                 .exceptionHandling().accessDeniedHandler(accessDeniedHandler())
                 .and()

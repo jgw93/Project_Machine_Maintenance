@@ -50,7 +50,6 @@ public class CustomUserDetailService implements UserDetailsService {
                 member.getAddress1(),
                 member.getAddress2(),
                 member.getRoleSet(),
-                //ROLE_ADMIN, ROLE_TEACHER
                 authorities
         );
         log.info(dto);

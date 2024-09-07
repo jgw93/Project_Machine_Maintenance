@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="148406d7-f9e7-4221-a46b-aa6e4c7639e1" name="변경" comment="로그인 작업중">
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project_machine_maintenance/domain/Tool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project_machine_maintenance/domain/Tool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project_machine_maintenance/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project_machine_maintenance/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project_machine_maintenance/service/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project_machine_maintenance/service/MemberServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project_machine_maintenance/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project_machine_maintenance/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project_machine_maintenance/security/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project_machine_maintenance/security/CustomUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project_machine_maintenance/security/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project_machine_maintenance/security/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project_machine_maintenance/security/filter/JWTFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project_machine_maintenance/security/filter/JWTFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,11 +100,11 @@
       <recent name="C:\Project_Machine_Maintenance\src\main\java\com\example\project_machine_maintenance\security" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Project_Machine_Maintenance\src\main\resources\templates" />
       <recent name="C:\Project_Machine_Maintenance\src\main\resources\static" />
       <recent name="C:\Project_Machine_Maintenance\src\main\resources\static\css" />
       <recent name="C:\Project_Machine_Maintenance\src\main\resources" />
       <recent name="C:\Project_Machine_Maintenance\src\main\resources\static\html" />
-      <recent name="C:\Project_Machine_Maintenance\src\main\resources\static\html\css" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.project_machine_maintenance.security.dto" />
@@ -142,7 +141,7 @@
       <workItem from="1725695833750" duration="5059000" />
       <workItem from="1725701416078" duration="129000" />
       <workItem from="1725701836193" duration="122000" />
-      <workItem from="1725702316465" duration="949000" />
+      <workItem from="1725702316465" duration="1955000" />
     </task>
     <servers />
   </component>

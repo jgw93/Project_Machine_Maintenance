@@ -40,7 +40,6 @@ public class AuthController {
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String jwt = jwtUtil.generateToken(Map.of("mno", mno));
 
-        // 사용자 정보를 가져와서 mno, m_name, roleSet을 응답에 포함
         MemberSecurityDTO userDetails = (MemberSecurityDTO) authentication.getPrincipal();
         String Name = userDetails.getName();
         Set<MemberRole> roleSet = userDetails.getRoleSet();
@@ -68,7 +67,7 @@ public class AuthController {
 
     @PostMapping("/logout")
     public ResponseEntity<?> logout(HttpServletResponse response) {
-        SecurityContextHolder.clearContext(); // 인증 정보 제거
+        SecurityContextHolder.clearContext();
 
         return ResponseEntity.ok().body("Logged out successfully");
     }

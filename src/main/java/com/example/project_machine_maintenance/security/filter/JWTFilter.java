@@ -36,7 +36,7 @@ public class JWTFilter extends OncePerRequestFilter {
         String requestURI = request.getRequestURI();
 
         // 회원가입 경로는 필터를 거치지 않도록 예외 처리
-        if ("/members/register".equals(requestURI)) {
+        if ("/register".equals(requestURI)) {
             filterChain.doFilter(request, response);
             return;
         }
