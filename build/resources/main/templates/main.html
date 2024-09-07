@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 페이지</title>
+</head>
+<body>
+<h1>메인 페이지</h1>
+<div id="userInfo"></div>
+<button onclick="logout()">로그아웃</button>
+
+<script>
+    // 사용자 정보 출력
+    const mno = sessionStorage.getItem('mno');
+    const name = sessionStorage.getItem('name');
+    const roleSet = JSON.parse(sessionStorage.getItem('roleSet'));
+
+    document.getElementById('userInfo').innerHTML = `
+            <p>아이디: ${mno}</p>
+            <p>이름: ${name}</p>
+            <p>역할: ${roleSet}</p>
+        `;
+
+    // 로그아웃 함수
+    function logout() {
+        fetch('/auth/logout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => {
+                console.log('로그아웃 성공');
+
+                // 세션 스토리지에서 정보 삭제
+                sessionStorage.removeItem('mno');
+                sessionStorage.removeItem('name');
+                sessionStorage.removeItem('roleSet');
+                sessionStorage.removeItem('accessToken');
+
+                alert('로그아웃 성공');
+
+                // 로그인 페이지로 이동
+                window.location.href = '/login';
+            })
+            .catch(error => {
+                console.error('로그아웃 실패:', error);
+                alert('로그아웃 실패');
+            });
+    }
+</script>
+</body>
+</html>

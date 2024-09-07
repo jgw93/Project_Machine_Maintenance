@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토큰 갱신</title>
+</head>
+<body>
+<h1>토큰 갱신</h1>
+<button onclick="refreshToken()">토큰 갱신</button>
+
+<script>
+    function refreshToken() {
+        const refreshToken = localStorage.getItem('refreshToken');
+
+        fetch('/auth/refresh', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ refreshToken: refreshToken })
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('토큰 갱신 성공:', data);
+                localStorage.setItem('accessToken', data.accessToken);
+                alert('토큰이 갱신되었습니다.');
+            })
+            .catch(error => {
+                console.error('토큰 갱신 실패:', error);
+                alert('토큰 갱신에 실패했습니다.');
+            });
+    }
+</script>
+</body>
+</html>
